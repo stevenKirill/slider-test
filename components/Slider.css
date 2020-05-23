@@ -1,0 +1,65 @@
+.wrapper {
+    margin: 100px auto;
+    display: flex
+}
+.slider-container {
+    overflow: hidden;
+    width: 512px;
+}
+.images {
+    margin: 0;
+    padding: 0;
+}
+.image {
+    list-style-type: none;
+    position: relative;
+}
+.first, .last {
+    position: relative;
+}
+.first-span, .last-span {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    font-size: 1.5rem;
+    margin: 0;
+    transition: all ease-in-out 0.1s;
+}
+.arrow-up {
+    background-image: url(../img/up.png);
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: calc(50% - 32px);
+    bottom: 0;
+}
+.arrow-down {
+    background-image: url(../img/down.png);
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 32px);
+    transition: all ease-in-out 0.5s;
+}
+.first-span:hover , .arrow-down:hover, .last-span:hover , .arrow-up:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.dots_container {
+    margin-top: calc(50% - 131.5px);
+    margin-left: 20px;
+}
+.dots_container .dot:first-child {
+    background-color: orange;
+}
+.dot {
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    margin: 0px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+}

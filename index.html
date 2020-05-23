@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./components/Slider.css">
+  <link rel="stylesheet" href="./components/RangeSlider.css">
+</head>
+<body>
+    <div class="root"></div>
+
+    <script type="module">
+        import Slider from './components/Slider.js';
+        import RangeSlider from './components/RangeSlider.js'
+
+        // params for main slider
+        const IMAGES_HEIGHT = 512;
+        const IMAGES_WIDTH = 512;
+        const imageLinks = [
+            'beach-sunset.png',
+            'snowflake.png',
+            'sun.png',
+            'thunderstorm.png',
+            'rainbow.png',
+            'moonlight.png'
+        ];
+        const rangeImageLinks = [
+            'moon-phase',
+            'tornado',
+            'flag',
+        ];  
+
+        const slider = new Slider(imageLinks,
+        IMAGES_HEIGHT,
+        IMAGES_WIDTH
+        );
+
+        const min = 0;
+        const max = 100;
+        const years = [2000,2010,2020];
+
+
+        const rangeSlider = new RangeSlider(
+            min,
+            max,
+            years,
+            rangeImageLinks
+            );
+
+        const root = document.querySelector('.root');
+        root.append(slider.element)
+        root.append(rangeSlider.element)
+
+    </script>
+</body>

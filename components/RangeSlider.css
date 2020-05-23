@@ -1,0 +1,48 @@
+.range-slider {
+    width: 54%;
+    -webkit-appearance: none;
+    background-color: orange;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color :black;
+    border-radius: 10px;
+}
+
+.range-slider:focus {
+    visibility: hidden;
+}
+
+.range-slider-years {
+    margin-top: 10px;
+    display: grid;
+}
+
+.range-slider-year {
+    font-size: 2rem;
+}
+.range-slider-years:first-child {
+    text-align: right;
+    margin-right: 20%;
+}
+.range-slider-years:last-child {
+    text-align: left;
+    margin-left: 20%;
+}
+.range-slider-images {
+    display: flex;
+    width: 512px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.range-slider-element-image {
+    list-style-type: none;
+}
